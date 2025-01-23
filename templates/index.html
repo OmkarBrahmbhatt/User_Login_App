@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logged In User</title>
+  <style>
+    /* Apply a gradient background to the entire page */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    /* Style the container holding the content */
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    /* Style the heading */
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    /* Style the paragraph */
+    p {
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+
+    /* Style the logout button */
+    .logout-button {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      color: #6a11cb;
+      background-color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Add hover effect to the logout button */
+    .logout-button:hover {
+      background-color: #6a11cb;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, User!</h1>
+    <p> You are now logged In</p>
+    <a href="/logout" class="logout-button">Logout</a>
+  </div>
+</body>
+</html>

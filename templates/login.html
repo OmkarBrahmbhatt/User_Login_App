@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Login Page">
+    <meta name="author" content="Your Name">
+    <title>Login Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        font-family: 'Arial', sans-serif;
+        color: #fff;
+      }
+
+      .form-signin {
+        width: 100%;
+        max-width: 400px;
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        color: #333;
+      }
+
+      .form-signin h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #6a11cb;
+        text-align: center;
+      }
+
+      .form-signin .form-control {
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        padding: 10px;
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .form-signin .form-control:focus {
+        border-color: #6a11cb;
+        box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
+      }
+
+      .form-signin .btn {
+        background-color: #6a11cb;
+        border: none;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .form-signin .btn:hover {
+        background-color: #4e0fa5;
+      }
+
+      .form-signin .checkbox {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .form-signin .text-muted {
+        text-align: center;
+        color: #888;
+      }
+
+      .form-signin .text-muted a {
+        color: #6a11cb;
+        text-decoration: none;
+      }
+
+      .form-signin .text-muted a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 768px) {
+        .form-signin {
+          padding: 20px;
+        }
+
+        .form-signin h1 {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-signin" method="post" action="/login">
+      {% csrf_token %}
+      <h1 class="h3 mb-3 font-weight-normal">Welcome Back</h1>
+      <label for="inputEmail" class="sr-only">Username</label>
+      <input type="text" id="inputEmail" name="username" class="form-control" placeholder="Username" required autofocus>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2023 <a href="#">Your Company</a></p>
+    </form>
+  </body>
+</html>
